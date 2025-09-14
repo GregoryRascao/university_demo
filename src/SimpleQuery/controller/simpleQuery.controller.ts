@@ -5,7 +5,7 @@ import { SimpleQueryService } from '../service/simpleQuery.service';
 export class SimpleQueryController {
   constructor(private readonly simpleQueryService: SimpleQueryService) {}
 
-    @Get('cours')
+  @Get('cours')
   async getAllCours() {
     return await this.simpleQueryService.findAllCours();
   }
