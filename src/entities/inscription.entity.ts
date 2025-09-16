@@ -12,7 +12,7 @@ export class Inscription {
   @Column()
   prenom: string;
 
-  @Column()
+  @PrimaryColumn()
   annee_etude: number;
 
   @Column('text')

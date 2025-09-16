@@ -16,8 +16,10 @@ export class SimpleQueryService {
     private readonly noteRepo: Repository<Note>,
   ) {}
 
-  findAllInscriptions() {
-    return this.inscriptionRepo.find();
+  async findAllInscriptions() {
+    const inscriptions = await this.inscriptionRepo.find();
+    console.log(inscriptions);
+    return inscriptions;
   }
 
   findInscriptionByMatricule(matricule: string) {
